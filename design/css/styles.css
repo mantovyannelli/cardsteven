@@ -1,0 +1,45 @@
+/* Variáveis CSS são declaradas no elemento :root*/
+/* nome de variável CSS deve iniciar com dois hífens -- */
+/* usar letras minúsculas e não acentuar */
+/* nomes compostos devem estar separados por hífen */
+:root {
+    --color-red: rgb(179, 56, 59);
+    --color-white: rgb(255, 255, 255);
+    --color-grey-700: rgb(51, 51, 51);
+    --color-grey-800: rgb(31, 31, 31);
+    --color-grey-900: rgb(20, 20, 20);
+    --radius-sm: 8px; 
+    --radius-full: 100%; 
+}
+/* definindo a cor de fundo para a página */
+body {
+    background-color: var(--color-grey-900);
+}
+/* definindo formatações que serão usadas na div */
+/* conceito de herança: filhos herdam algumas propriedades do pai */
+/* se o filho tiver algum valor definido - permanece a formatação do filho */
+.container {
+    background-color: var(--color-grey-800);
+    color: var(--color-white);
+    width: 500px;
+    text-align: center;
+    border-radius: var(--radius-sm);
+}
+
+.container img {
+border-radius: var(--radius-full);
+border: 3px solid var(--color-grey-700);
+scale: 0.7;
+transition: .5s;
+}
+
+.container:hover img {
+    border-color: var(--color-red);
+    scale: 0.8;
+
+}
+
+/* efeito cascata: formatação mais embaixo prevalece */
+.container h2 {
+    color: var(--color-red);
+}
