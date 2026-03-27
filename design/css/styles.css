@@ -10,10 +10,23 @@
     --color-grey-900: rgb(20, 20, 20);
     --radius-sm: 8px; 
     --radius-full: 100%; 
+    --spacing-10: 10px;
+    --spacing-20: 20px;
+    --spacing-30:30px;
+
 }
+
+/* Reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
 /* definindo a cor de fundo para a página */
 body {
     background-color: var(--color-grey-900);
+    font-family: "Mountains of Christmas", serif;
 }
 /* definindo formatações que serão usadas na div */
 /* conceito de herança: filhos herdam algumas propriedades do pai */
@@ -24,22 +37,66 @@ body {
     width: 500px;
     text-align: center;
     border-radius: var(--radius-sm);
+    padding: 20;
+    box-sizing: border-box;
+    margin: auto;
 }
 
 .container img {
 border-radius: var(--radius-full);
 border: 3px solid var(--color-grey-700);
-scale: 0.7;
+scale: 0.4;
 transition: .5s;
+
 }
 
 .container:hover img {
     border-color: var(--color-red);
-    scale: 0.8;
-
+    scale: 0.6;
+ 
 }
 
+.container h1{
+    font-size: 33 px;
+    font-weight: 300;
+    margin-block-end: var(--spacing-20);
+   
+}
 /* efeito cascata: formatação mais embaixo prevalece */
 .container h2 {
     color: var(--color-red);
+    font-size: 28 px;
+    font-weight: 200;
+    margin-block-end: var(--spacing-20);
+}
+
+.container p {
+font-size: 18 px;
+font-weight: 100;
+margin-block-end: var(--spacing-20);
+}
+
+/* formatando os links */
+
+.social {
+    list-style: none;
+}
+
+.social li {
+    background-color: var(--color-grey-700);
+    margin-block: var(--spacing-20);
+    padding-block: var(--spacing-10);
+    border-radius: var(--radius-sm);
+    transition: .1s;
+}
+
+.social li:hover{
+    background-color: var(--color-red)
+}
+
+.social a {
+    color: var(--color-white);
+    text-decoration: underline;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
